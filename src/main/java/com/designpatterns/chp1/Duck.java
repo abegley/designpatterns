@@ -7,6 +7,14 @@ public abstract class Duck {
 
     final static Logger logger = LoggerFactory.getLogger(Duck.class);
 
+    public void setFlyBehaviour(FlyBehaviour flyBehaviour) {
+        this.flyBehaviour = flyBehaviour;
+    }
+
+    public void setQuackBehavior(QuackBehaviour quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
+
     FlyBehaviour flyBehaviour;
     QuackBehaviour quackBehavior;
 
