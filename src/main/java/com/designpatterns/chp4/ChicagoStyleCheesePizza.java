@@ -1,29 +1,20 @@
 package com.designpatterns.chp4;
 
-
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ChicagoStyleCheesePizza implements Pizza {
-    private static final Logger logger = LoggerFactory.getLogger(ChicagoStyleCheesePizza.class);
+public class ChicagoStyleCheesePizza extends Pizza {
 
-    @Override
-    public void prepare() {
-        logger.info("Preparing Chicago cheese pizza");
+    public ChicagoStyleCheesePizza() {
+        logger = LoggerFactory.getLogger(ChicagoStyleCheesePizza.class);
+        name="Chicago Style Deep Dish Cheese Pizza";
+        dough="Extra Thick Crust Dough";
+        sauce="Plum Tomato Sauce";
+
+        toppings.add("Shredded Mozzarella Cheese");
     }
 
     @Override
-    public void bake() {
-        logger.info("Baking Chicago cheese pizza");
-    }
-
-    @Override
-    public void cut() {
-        logger.info("Chicago Cheese pizza sliced and diced");
-    }
-
-    @Override
-    public void box() {
-        logger.info("Chicago Cheese pizza boxed and ready for pick-up/delivery");
+    public void cut(){
+        logger.info("Cutting the pizza into square slices");
     }
 }

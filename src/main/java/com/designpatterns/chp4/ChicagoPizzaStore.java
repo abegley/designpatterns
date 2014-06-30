@@ -10,7 +10,7 @@ public class ChicagoPizzaStore extends PizzaStore {
         } else if ("clam".equals(type)){
             return new ChicagoStyleClamPizza();
         } else if ("veggie".equals(type)){
-            return new ChicagoStyleVeggiePizza();
+            return new ChicagoStyleVeggieIPizza();
         } else return null;
     }
 }
